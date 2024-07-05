@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #top{
+        text-align: center;
+    }
+    #div1{
+        width: 100%;
+        aspect-ratio: 1;
+
+    }
+    img{
+        width: 50%;
+        aspect-ratio: 1.5;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <h1 id="top">Automatic image changer</h1>
+    <div id="div1">
+        <img src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg" alt="">
+    </div>
+
+</body>
+<SCript>
+       let array = ["https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg",
+    "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
+    "https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg",
+    "https://pixlr.com/images/index/product-image-one.webp",
+    "https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg",
+    "https://miro.medium.com/v2/resize:fit:1400/1*YMJDp-kqus7i-ktWtksNjg.jpeg",
+    "https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1448734171.jpg",
+    "https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true",
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+    "https://media.gcflearnfree.org/ctassets/topics/246/share_flower_fullsize.jpg"]
+
+
+    let btn = document.getElementById('click')
+    setInterval(() => {
+        let img = document.querySelector("img")
+        let result = Math.floor(Math.random()*array.length)
+        img.src= array[result]
+    }, 3000);
+
+
+
+
+</SCript>
+</html>
